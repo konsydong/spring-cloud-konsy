@@ -32,6 +32,7 @@ public class CustInfoController {
             log.info("查询客户信息错误", e);
         }
         if (custInfo != null) {
+            log.info("查询客户成功:{}", custInfo);
             return new CommonResult(200, "查询客户,id:" + id, custInfo);
         } else {
             return new CommonResult(444, "没有对应记录,查询ID:" + id);
