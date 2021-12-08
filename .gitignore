@@ -11,10 +11,10 @@ buildNumber.properties
 .mvn/wrapper/maven-wrapper.jar
 .idea
 
-
+#.iml file
 web-server/web-server.iml
 cloud-api-commons/cloud-api-commons.iml
 
-
+# target dir
 web-server/target
 cloud-api-commons/target
