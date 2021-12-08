@@ -9,3 +9,12 @@ buildNumber.properties
 .mvn/timing.properties
 # https://github.com/takari/maven-wrapper#usage-without-binary-jar
 .mvn/wrapper/maven-wrapper.jar
+.idea
+
+
+web-server/web-server.iml
+cloud-api-commons/cloud-api-commons.iml
+
+
+web-server/target
+cloud-api-commons/target
