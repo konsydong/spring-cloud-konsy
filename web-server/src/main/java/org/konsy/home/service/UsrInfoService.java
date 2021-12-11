@@ -1,6 +1,7 @@
 package org.konsy.home.service;
 
 import org.konsy.home.dao.UsrInfoDao;
+import org.konsy.home.model.NasUsrInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,8 +22,8 @@ public class UsrInfoService {
      * @author konsy
      * @date 2021/12/11 23:44
      */
-    public int signUpUsr(String usrName, String passWord) {
-        return usrInfoDao.signUpUsr(usrName, passWord);
+    public int signUpUsr(NasUsrInfo nasUsrInfo) {
+        return usrInfoDao.signUpUsr(nasUsrInfo);
     }
 
     /**
