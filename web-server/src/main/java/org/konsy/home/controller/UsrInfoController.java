@@ -10,6 +10,7 @@ import org.konsy.home.model.NasUsrInfo;
 import org.konsy.home.service.UsrInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import springfox.documentation.annotations.ApiIgnore;
 
 /**
  * usrInfo 首页用户登录注册
@@ -28,10 +29,10 @@ public class UsrInfoController {
     @PostMapping(value = "signUpUsr")
     @ApiOperation(value = "首页用户注册")
     @ApiImplicitParams({
-            @ApiImplicitParam(),
-            @ApiImplicitParam(name = "passWord", value = "密码", required = true, paramType = "query", example = "123456")
+            @ApiImplicitParam(name = "usrName", value = "用户名", required = true, paramType = "body", example = "konsy"),
+            @ApiImplicitParam(name = "passWord", value = "密码", required = true, paramType = "body", example = "123456")
     })
-    public CommonResult SignUpUsr(@RequestBody NasUsrInfo nasUsrInfo) {
+    public CommonResult SignUpUsr(@ApiIgnore @RequestBody NasUsrInfo nasUsrInfo) {
         int result = 0;
         //1.校验用户名是否存在
         if (isUsrExist(nasUsrInfo.getUsrName())) {
