@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.konsy.home.dao.UsrInfoDao">
+    <insert id="signUpUsr">
+        INSERT into nas_usr_info
+            (Usr_Name, Pass_Word)
+            value
+            (#{usrName}, #{passWord})
+    </insert>
+    <select id="isUsrExist" resultType="int">
+        select count(1)
+        from nas_usr_info
+        where Usr_Name = #{usrName}
+    </select>
+
+</mapper>
