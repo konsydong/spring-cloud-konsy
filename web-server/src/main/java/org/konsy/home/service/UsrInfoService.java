@@ -35,4 +35,14 @@ public class UsrInfoService {
     public int isUsrExist(String usrName) {
         return usrInfoDao.isUsrExist(usrName);
     }
+
+    /**
+     * 登录用户
+     *
+     * @author konsy
+     * @date 2021/12/13 23:23
+     */
+    public int signInUsr(NasUsrInfo nasUsrInfo) {
+        return 0;
+    }
 }

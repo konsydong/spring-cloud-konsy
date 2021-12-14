@@ -12,9 +12,11 @@ buildNumber.properties
 .idea
 
 #.iml file
-web-server/web-server.iml
 cloud-api-commons/cloud-api-commons.iml
+web-server/web-server.iml
+web-auth/web-auth.iml
 
 # target dir
-web-server/target
 cloud-api-commons/target
+web-server/target
+web-auth/target
